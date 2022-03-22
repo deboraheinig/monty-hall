@@ -1,0 +1,63 @@
+#include <iostream>
+#include <time.h>
+
+    int contador = 10000;
+    int contadorVitorias = 0;
+    int contadorVitoriaMudou = 0;
+    int contadorVitoriaFicou = 0;
+    int i = 0;
+
+    for (int i = 0; i <= contador; ++i)
+
+    {
+        int portaPremiada = (1 + rand() % 3);
+        int primeiraEscolha = (1 + rand() % 3);
+        int segundaEscolha;
+
+        switch (primeiraEscolha)
+
+        {
+        case 1:
+            segundaEscolha = (1 + rand() % 3 != 1);
+            break;
+        case 2:
+            segundaEscolha = (1 + rand() % 3 != 2);
+            break;
+        case 3:
+            segundaEscolha = (1 + rand() % 3 != 3);
+        }
+
+        if (primeiraEscolha == portaPremiada)
+        {
+            ++contadorVitoriaMudou;
+            ++contadorVitorias;
+        }
+
+        else if (segundaEscolha == portaPremiada)
+        {
+            ++contadorVitoriaFicou;
+            ++contadorVitorias;
+        }
+    }
+
+    std::cout << "=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl;
+    std::cout << "" << std::endl;
+    std::cout << " | Seja bem-vindo ao show de Monty Hall! |" << std::endl;
+    std::cout << "" << std::endl;
+    std::cout << "=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl;
+    std::cout << "" << std::endl;
+    std::cout << " |            Existem 3 portas:            |" << std::endl;
+    std::cout << " |    Atras de uma porta, ha um carro.     |" << std::endl;
+    std::cout << " |    Atras das outras 2, estao 2 cabras.  |" << std::endl;
+    std::cout << " |     Sera que voce ira ganhar o carro?   |" << std::endl;
+    std::cout << "" << std::endl;
+    std::cout << "=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl;
+    std::cout << "" << std::endl;
+
+    std::cout << " |     Apos " << contador << " jogos, os resultados foram:      |" << std::endl;
+    std::cout << " | Porcentagem de vitoria apos mudar de porta: " << contadorVitoriaMudou * 100 / contadorVitorias << "% |" << std::endl;
+    std::cout << " | Porcentagem permanecendo com a mesma porta: " << contadorVitoriaFicou * 100 / contadorVitorias << "% |" << std::endl;
+    std::cout << "" << std::endl;
+    std::cout << "=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << std::endl;
+    return 0;
+}
