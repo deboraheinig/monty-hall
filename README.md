@@ -1,6 +1,6 @@
 # Monty Hall: solução simples
 
-Código em Python que simula o jogo de [Monty Hall](https://pt.wikipedia.org/wiki/Problema_de_Monty_Hall)
+Código em C++ que simula o jogo de [Monty Hall](https://pt.wikipedia.org/wiki/Problema_de_Monty_Hall)
 
 *fonte: Wikipedia*
 
@@ -14,7 +14,7 @@ O jogo consistia no seguinte: Monty Hall, o apresentador, apresentava três port
 
 # Requisitos
 
-* Python 3.2+
+* C / C++
 
 # Exemplo de saída
 
