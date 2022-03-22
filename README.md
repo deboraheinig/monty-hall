@@ -12,7 +12,7 @@ Na 3.ª etapa Monty pergunta ao concorrente se quer decidir permanecer com a por
 
 # Requisitos
 
-* python 3.2+
+* Python 3.2+
 
 # Exemplo de saída
 
